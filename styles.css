@@ -1,147 +1,217 @@
-:root {
-    --secondary: #3a3a3a;
-    --bg-light: #f4f4f9;
-    --primary: #59c7f3;
-    --text-dark: #222;
-}
-
-* {
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Michroma", sans-serif;
-}
-.michroma-regular {
-  font-family: "Nunito", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Inter', sans-serif;
+    color: #0f172a;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
-    background:linear-gradient(to left,rgb(245, 202, 209), white);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-header {
-    background: linear-gradient(to right, var(--primary), var(--secondary));
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-section {
-    margin-bottom: 60px;
-}
-
-h2 {
-    font-size: 2em;
-    color: var(--primary);
-    margin-bottom: 20px;
-}
-
-.projects-list {
+header{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.project {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    flex: 1 1 calc(33.333% - 20px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-.project h3 {
-    margin-bottom: 10px;
-    color: #444;
-}
-
-a {
-    color: var(--primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--secondary);
-}
-
-.contact p {
-    margin-bottom: 10px;
-}
-
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: var(--primary);
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-    background: var(--secondary);
-    transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-    .project {
-        flex: 1 1 100%;
-    }
-    }
-
-.start{
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: rgb(160, 194, 37);
-
-}
-.start:hover{
-    transition: 0.5s;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
     
-    color: var(--primary);
+    
+}
+
+body{
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.nav-container{
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.google-header{
+    font-family: 'Poppins', sans-serif;
+}
+
+.img{
+    border: none;
+    background: transparent;
+}
+
+.img img{
+    width:40px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.textlink{
+    color: inherit;
+    text-decoration: none;
+
+}
+
+.textlink:hover{
+    text-decoration: underline;
+}
+
+.iconlink{
+    font:1rem;
+    color:inherit;
+    width: 30px;
+    aspect-ratio: 1/1;
+    overflow:hidden;
+    border-radius:100%;
+    display: grid;
+    place-items: center;
+}
+
+.iconlink:hover{
+    background-color: rgb(224, 222, 222);
+}
+
+main{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    
+}
+
+.inputbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: 1px solid rgb(218, 213, 213);
+    border-radius: 50px;
+    box-shadow: 0 0 1px 1px rgb(238, 237, 237);
+}
+
+.inputbar:focus-within{
+    box-shadow: 0 0 4px 2px rgb(226, 224, 224) ;
+}
+
+.inputbar:hover{
+    box-shadow: 0 0 6px 2px rgb(236, 236, 236) ;
+    
+}
+
+.inputbar div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inputbar input{
+    flex:1;
+    border: none;
+    outline: none;
+    width: 100%;
+
+}
+
+.buttongrid{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 1rem;
+    border: none;
+    
+
+}
+
+.buttongrid button{
+    padding: 0.5rem;
+    background-color: rgb(238, 236, 235);
+    border: none;
+    border-color: transparent;
+    
+}
+
+.buttongrid button:hover{
+    background-color: rgb(180, 177, 177);
+    border-radius: 20px;
+
+}
+
+.titletext{
+    font-size: 100px;
+    font-weight: 450;
+    display: flex;
+    flex-direction:row;
+    gap:0.9px;
+    padding: 10px;
+}
+
+.inputicons:hover{
+    opacity: 0.6;
+}
+
+.inputiconbutton{
+    border:none;
+    background: transparent ;
+}
+
+.footertext{
+    
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    bottom: 30px;
+    background-color: rgb(226, 221, 221);
 }
 
 
-.hovering{
-    color:var(--primary)
+footer{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: px;
+    background-color: rgb(240, 238, 238);
+
 }
-.hovering:hover{
-    color: rgb(160, 194, 37);
-    transition: 0.8s;
+
+.footleft{
+    display: flex;
+    justify-content: left;
+    gap: 35px;
+    padding: 20px;
+    
 }
+
+.footright{
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    padding: 20px;
+}
+
+.langauge{
+    padding-bottom: 400px;
+}
+
+.footleft a{
+    color:inherit;
+    text-decoration:none;
+}
+.footright a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+.footleft a:hover{
+    text-decoration:underline;
+}
+
+.footright a:hover{
+    text-decoration:underline;
+}
+
