@@ -24,6 +24,18 @@ body {
     line-height: 1.6;
 }
 
+.img{
+    border: none;
+    background: transparent;
+}
+
+.img img{
+    width:40px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
 header {
     background: linear-gradient(to right, var(--primary), var(--secondary));
     color: white;
